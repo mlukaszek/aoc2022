@@ -51,8 +51,7 @@ def main(args = ()):
             lcm = math.lcm(lcm, monkey.test)
 
         for round in range(20 if part == 1 else 10000):
-            for number in range(len(monkeys)):
-                monkey = monkeys[number]
+            for monkey in monkeys:
                 while monkey.items:
                     item = monkey.items.pop(0)
                     item = monkey.inspect(monkey, item)
