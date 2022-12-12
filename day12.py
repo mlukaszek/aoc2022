@@ -76,7 +76,7 @@ def main(args = ()):
                     graph.setCost(*end, ord('z'))
     
     for part in (1, 2):
-        possibleStarts = [ node for node, elevation in graph.costs.items() if graph.getCost(node) == ord('a') ] if part == 2 else [ start ]
+        possibleStarts = [ node for node in graph.costs.keys() if graph.getCost(node) == ord('a') ] if part == 2 else [ start ]
     
         steps = {}
         for start in possibleStarts:
