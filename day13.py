@@ -12,7 +12,7 @@ def compare(left, right):
         try:
             leftItem = left[i]
         except IndexError:
-            return True # Right side is smaller
+            return True # Left side is smaller
         try:
             rightItem = right[i]
         except IndexError:
