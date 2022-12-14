@@ -1,7 +1,6 @@
 import sys
 from collections import defaultdict
 from dataclasses import dataclass, astuple
-from math import sqrt
 from copy import copy
 
 
