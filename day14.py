@@ -11,6 +11,8 @@ class Point:
 
 
 def connect(cave, points):
+    EPS = 0.001
+
     for i, start in enumerate(points[:-1]):
         end = points[i+1]
         dx = end.x - start.x
@@ -18,7 +20,7 @@ def connect(cave, points):
         divider = max(abs(dx), abs(dy))
         ix = dx * 1.0 / divider
         iy = dy * 1.0 / divider
-        while abs(end.x - start.x) != 0 or abs(end.y - start.y) != 0:
+        while abs(end.x - start.x) > EPS or abs(end.y - start.y) > EPS:
             cave[( round(start.x), round(start.y) )] = "#"
             start.x += ix
             start.y += iy
